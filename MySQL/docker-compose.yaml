@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  db:
+    image: mysql
+    container_name: mysql-container
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: senhadeteste
+    volumes:
+      - ./api/db/data:/var/lib/mysql
