@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  web:
+    image: "php:7.2-apache"
+    container_name: php-container
+    restart: always
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - "81:80"
+    depends_on: 
+      - db
